@@ -1,9 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { Typography, Button, RadioGroup, Radio} from '@mui/material';
-import image from "./component/assets/Group 72.png"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Login from "./Pages/Login"; 
+import Login from './Pages/Login' 
+
 function App() {
   return (
    <Router>
