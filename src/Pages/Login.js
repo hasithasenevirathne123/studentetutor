@@ -19,40 +19,45 @@ import { Navigate } from "react-router";
 const Login = () => {
   const handleSubmit = () => {};
 
+  const clickAlert = () => {
+    
+    alert("Hello")
+
+  };
+
   return (
     <>
       <Grid container m={2}>
-        <Grid
-          style={{ fontFamily: "Plus Jakarta Sans", fontSize: "50px" }}
-          item
-          lg={6}
-          md={6}
-          sm={12}
-          xs={12}
-        ></Grid>
-        <Grid item lg={6} md={6} sm={12} xs={12}>
-          <Button
+      <Grid container>
+              <Grid item xs>
+                <Typography variant="h3" style={{fontFamily:"Plus Jakarta Sans"}}>etutor</Typography>
+              </Grid>
+              <Grid item>
+              <Button
             className="btn-reg"
             style={{ backgroundColor: "#d96767" }}
             variant="contained"
           >
             Register
           </Button>
-        </Grid>
+              </Grid>
+            </Grid>
       </Grid>
-      <Grid container component="main" style={{ padding:"30px" }}>
+      <Grid container component="main">
         <Grid item lg={6} md={6} sm={12} xs={12}>
-          <img style={{width:"100%"}} src={image} />
+          <img style={{ width: "100%" }} src={image} />
         </Grid>
+
         <Grid
-          style={{ height: "40rem", marginTop: "12rem" }}
+          style={{ height: "40rem", marginTop: "5rem" }}
           item
           lg={6}
           md={6}
           sm={12}
           xs={12}
-          component={Card}
-          squarero elevation={2}
+          component={Paper}
+          squarero
+          elevation={2}
         >
           <Box
             sx={{
@@ -69,6 +74,7 @@ const Login = () => {
             >
               Log In
             </Typography>
+
             <Box
               component="form"
               noValidate
@@ -86,7 +92,7 @@ const Login = () => {
                 autoFocus
               ></TextField>
               <TextField
-                style={{fontFamily: "Plus Jakarta Sans" }}
+                style={{ fontFamily: "Plus Jakarta Sans"}}
                 margin="normal"
                 required
                 fullWidth
@@ -96,12 +102,13 @@ const Login = () => {
                 autoFocus
               ></TextField>
               <FormControlLabel
-                style={{ fontFamily: "Plus Jakarta Sans" }}
+                style={{ fontFamily: "Plus Jakarta Sans",justifyContent:"space-between"}}
                 control={<Checkbox />}
                 label="Remember Me"
               />
-              <Link href="#" variant="body2">
-                Forgot Password
+
+              <Link href="#" variant="body2" style={{ textDecoration: "none", justifyContent:"space-between", color:"#d96767", fontWeight:"bolder", marginLeft:"50%"}}>
+                Forgot Password?
               </Link>
 
               <Button
@@ -123,10 +130,22 @@ const Login = () => {
                   justifyContent: "center",
                   color: "black",
                   fontFamily: "Plus Jakarta Sans",
+                  marginLeft:"35%"
                 }}
               >
-                Do you have a account?
+                Don't have an account?
               </label>
+              <a
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  fontFamily: "Plus Jakarta Sans",
+                  fontWeight: "bolder",
+                  color: "#d96767",
+                }}
+              >
+                Register
+              </a>
             </Box>
           </Box>
         </Grid>
