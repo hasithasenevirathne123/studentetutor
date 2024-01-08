@@ -9,7 +9,6 @@ function App() {
    <Router>
     <Routes path='./' element={<Login/>}>
       <Route index element={<Login/>}/>
-      <Route index element={<Homepage/>}/>
     </Routes>
    </Router>
   );

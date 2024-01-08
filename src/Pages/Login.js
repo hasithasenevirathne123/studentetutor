@@ -12,18 +12,18 @@ import {
   colors,
   Card,
 } from "@mui/material";
-import image from "./Group 72.png";
+// import image from "./Group 72.png";
+import image2 from "./login image.png";
 import { red } from "@mui/material/colors";
-import { Navigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const handleSubmit = () => {};
 
   const clickAlert = () => {
-    
-    alert("Hello")
-
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -35,7 +35,7 @@ const Login = () => {
               <Grid item>
               <Button
             className="btn-reg"
-            style={{ backgroundColor: "#d96767" }}
+            style={{ backgroundColor: "#d96767" , margin:"20px"}}
             variant="contained"
           >
             Register
@@ -43,21 +43,19 @@ const Login = () => {
               </Grid>
             </Grid>
       </Grid>
-      <Grid container component="main">
+      <Grid container component="main" style={{justifyContent:"space-evenly"}}>
         <Grid item lg={6} md={6} sm={12} xs={12}>
-          <img style={{ width: "100%" }} src={image} />
+          <img style={{ width: "100%" }} src={image2} />
         </Grid>
 
-        <Grid
-          style={{ height: "40rem", marginTop: "5rem" }}
+        <Card
+          style={{ width:"500px", height:"fit-content", marginTop:"8%", justifyContent:"center"}}
           item
           lg={6}
           md={6}
           sm={12}
           xs={12}
-          component={Paper}
-          squarero
-          elevation={2}
+          
         >
           <Box
             sx={{
@@ -107,10 +105,9 @@ const Login = () => {
                 label="Remember Me"
               />
 
-              <Link href="#" variant="body2" style={{ textDecoration: "none", justifyContent:"space-between", color:"#d96767", fontWeight:"bolder", marginLeft:"50%"}}>
+              <Link href="#" variant="body2" style={{ textDecoration: "none", justifyContent:"space-between", color:"#d96767", fontWeight:"bolder", marginLeft:"30%"}}>
                 Forgot Password?
               </Link>
-
               <Button
                 fullWidth
                 style={{
@@ -120,8 +117,12 @@ const Login = () => {
                 type="submit"
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+
+                onClick={() => {
+                  navigate("/home")
+              }}
               >
-                LogIn
+                Log In
               </Button>
               <label
                 className="custom-control-form"
@@ -148,7 +149,7 @@ const Login = () => {
               </a>
             </Box>
           </Box>
-        </Grid>
+       </Card>
       </Grid>
     </>
   );
