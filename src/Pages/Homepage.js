@@ -102,6 +102,7 @@ function ResponsiveDrawer(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   const [anchor, setAnchor] = useState(null);
+  
   const handleClose = () => {
     setAnchor(null);
   };
@@ -109,6 +110,7 @@ function ResponsiveDrawer(props) {
   const handleMenu = (e) => {
     setAnchor(e.currenTarget);
   };
+
   return (
     <Box sx={{ display: "flex" }} s>
       <CssBaseline />
@@ -130,7 +132,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
 
-          <Typography
+          {/* <Typography
             sx={{ flexGrow: 1 }}
             variant="h4"
             style={{
@@ -141,9 +143,9 @@ function ResponsiveDrawer(props) {
             }}
           >
             Home
-          </Typography>
+          </Typography> */}
 
-          <Box>
+          {/* <Box>
             <Stack direction="row" spacing={2}>
               <Button>
                 <Avatar
@@ -154,9 +156,9 @@ function ResponsiveDrawer(props) {
                 />
               </Button>
             </Stack>
-            {/* <IconButton size="larger" onClick={handleMenu}>
+            <IconButton size="larger" onClick={handleMenu}>
               <AccountCircleIcon />
-            </IconButton> */}
+            </IconButton>
             <Menu
               id="menu-wrapper"
               anchorE1={anchor}
@@ -167,36 +169,8 @@ function ResponsiveDrawer(props) {
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>Log out</MenuItem>
             </Menu>
-
-          </Box>
-
+          </Box> */}
         </Toolbar>
-
-        <Grid container>
-          <Grid item xs={6}>
-            <Typography
-              sx={{ flexGrow: 1 }}
-              style={{
-                color: "black",
-                fontWeight: "bolder",
-                fontSize: "24px",
-                marginLeft: "30px",
-              }}
-            >
-              On Going Classes
-            </Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <Typography
-              sx={{ flexGrow: 1 }}
-              variant="h5"
-              style={{ color: "black", fontWeight: "bolder" }}
-            >
-             Find an Instructor
-            </Typography>
-           
-          </Grid>
-        </Grid>
 
         <Grid container>
           {/* <Grid
@@ -209,87 +183,90 @@ function ResponsiveDrawer(props) {
           ></Grid> */}
         </Grid>
 
-        <Grid container component="main" >
+        <Grid container component="main">
           <Grid
             item
             lg={6}
             md={6}
             sm={12}
-            xs={12}
-            style={{ marginLeft: "", }}
+            xs={6}
+           
           >
-            <Card
-              sx={{ maxWidth: 500, maxHeight: 500 }}
-              style={{ backgroundColor: "white" }}
-            >
-              <CardContent style={{ marginLeft: "0px" }}>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography variant="h5" style={{ fontWeight: "bolder" }}>
-                      Chemistry
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label>Started at : </label>
-                    <label style={{ fontSize: "30px" }}>15:30PM</label>
-                  </Grid>
-                </Grid>
-                <Typography gutterBottom variant="h7" component="div">
-                  Grade 12
-                </Typography>
-                <Button
-                  variant="outlined"
-                  color="error"
-                  style={{
-                    borderRadius: "36px",
-                    height: "33px",
-                    width: "106px",
-                  }}
-                >
-                  Theory
-                </Button>
-              </CardContent>
-              <CardActions>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontSize: "12px", fontWeight: "bolder" }}
+            <Grid>
+              <Card
+                sx={{ maxWidth: 500, maxHeight: 500 }}
+                style={{ backgroundColor: "white" }}
+              >
+                <CardContent style={{ marginLeft: "0px" }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography variant="h5" style={{ fontWeight: "bolder" }}>
+                        Chemistry
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      By Shiran Galewela
-                    </Typography>
+                      <label>Started at : </label>
+                      <label style={{ fontSize: "30px" }}>15:30PM</label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 12
+                  </Typography>
+                  <Button
+                    variant="outlined"
+                    color="error"
+                    style={{
+                      borderRadius: "36px",
+                      height: "33px",
+                      width: "106px",
+                    }}
                   >
-                    <Button
-                      style={{
-                        backgroundColor: "#d96767",
-                        borderRadius: "12px",
-                        height: "61px",
-                        width: "182px",
-                        label: "Join Now",
-                      }}
-                      variant="contained"
-                      endIcon={<ArrowRightAltIcon />}
+                    Theory
+                  </Button>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        By Shiran Galewela
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Join Now
-                    </Button>
+                      <Button
+                        style={{
+                          backgroundColor: "#d96767",
+                          borderRadius: "12px",
+                          height: "61px",
+                          width: "182px",
+                          label: "Join Now",
+                        }}
+                        variant="contained"
+                        endIcon={<ArrowRightAltIcon />}
+                      >
+                        Join Now
+                      </Button>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </CardActions>
-            </Card>
+                </CardActions>
+              </Card>
+            </Grid>
+
             <Grid
               container
               rowSpacing={1}
@@ -312,308 +289,435 @@ function ResponsiveDrawer(props) {
 
               {/* <Grid item xs={6}></Grid> */}
             </Grid>
+            <Grid>
+              <Card
+                sx={{ maxWidth: 350, maxHeight: 700 }}
+                style={{
+                  backgroundColor: "white",
+                  marginTop: "10px",
+                  borderRadius: "20px",
+                }}
+              >
+                <CardContent style={{ marginLeft: "0px" }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontWeight: "bolder", fontSize: "16px" }}
+                      >
+                        Physics
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
+                    >
+                      <label
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "16px",
+                        }}
+                      >
+                        23 Feb
+                      </label>
+                    </Grid>
+                  </Grid>
 
-            <Card
-              sx={{ maxWidth: 500, maxHeight: 700 }}
-              style={{
-                backgroundColor: "white",
-                marginTop: "10px",
-                borderRadius: "20px",
-              }}
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 13
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        Binura Binduhewa
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
+                    >
+                      <label>4.00PM - 6.00PM</label>
+                    </Grid>
+                  </Grid>
+                </CardActions>
+              </Card>
+
+              <Card
+                sx={{ maxWidth: 350, maxHeight: 700 }}
+                style={{
+                  backgroundColor: "white",
+                  marginTop: "10px",
+                  borderRadius: "20px",
+                }}
+              >
+                <CardContent style={{ marginLeft: "0px" }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontWeight: "bolder", fontSize: "16px" }}
+                      >
+                        Chemistry
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
+                    >
+                      <label
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "16px",
+                        }}
+                      >
+                        23 Feb
+                      </label>
+                    </Grid>
+                  </Grid>
+
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 13
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        Binura Binduhewa
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
+                    >
+                      <label>4.00PM - 6.00PM</label>
+                    </Grid>
+                  </Grid>
+                </CardActions>
+              </Card>
+
+              <Card
+                sx={{ maxWidth: 350, maxHeight: 700 }}
+                style={{
+                  backgroundColor: "white",
+                  marginTop: "10px",
+                  borderRadius: "20px",
+                }}
+              >
+                <CardContent style={{ marginLeft: "0px" }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontWeight: "bolder", fontSize: "16px" }}
+                      >
+                        Biology
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
+                    >
+                      <label
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "16px",
+                        }}
+                      >
+                        23 Feb
+                      </label>
+                    </Grid>
+                  </Grid>
+
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 13
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        Binura Binduhewa
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
+                    >
+                      <label>4.00PM - 6.00PM</label>
+                    </Grid>
+                  </Grid>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
+
+          <Grid item lg={6} md={6} sm={12} xs={12} style={{ marginLeft: "" }}>
+                <Grid container>
+                  <Grid item lg={6} md={6} sm={12} xs={12}>
+                    <Stack direction="row" spacing={2}>
+                      <Avatar alt="Remy Sharp" src={Image} />
+                      <Avatar alt="Travis Howard" src={Image} />
+                      <Avatar alt="Cindy Baker" src={Image} />
+                    </Stack>
+                  </Grid>
+
+                  <Grid
+                    item
+                    lg={6}
+                    md={6}
+                    sm={12}
+                    xs={12}
+                    style={{ textAlign: "end" }}
+                  ></Grid>
+                </Grid>
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             >
-              <CardContent style={{ marginLeft: "0px" }}>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontWeight: "bolder", fontSize: "16px" }}
-                    >
-                      Physics
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "30px",
-                        fontWeight: "bolder",
-                        fontSize: "16px",
-                      }}
-                    >
-                      23 Feb
-                    </label>
-                  </Grid>
-                </Grid>
-
-                <Typography gutterBottom variant="h7" component="div">
-                  Grade 13
+              <Grid item xs={6}>
+                <Typography
+                  sx={{ flexGrow: 1 }}
+                  variant="h5"
+                  style={{
+                    color: "black",
+                    fontWeight: "bolder",
+                    marginTop: "5rem",
+                    fontSize: "24px",
+                  }}
+                >
+                  Up Coming Classes
                 </Typography>
-              </CardContent>
-              <CardActions>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontSize: "12px", fontWeight: "bolder" }}
-                    >
-                      Binura Binduhewa
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label>4.00PM - 6.00PM</label>
-                  </Grid>
-                </Grid>
-              </CardActions>
-            </Card>
+              </Grid>
 
-            <Card
-              sx={{ maxWidth: 500, maxHeight: 700 }}
-              style={{
-                backgroundColor: "white",
-                marginTop: "10px",
-                borderRadius: "20px",
-              }}
-            >
-              <CardContent style={{ marginLeft: "0px" }}>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontWeight: "bolder", fontSize: "16px" }}
+              {/* <Grid item xs={6}></Grid> */}
+            </Grid>
+            <Grid>
+              <Card
+                sx={{ maxWidth: 350, maxHeight: 700 }}
+                style={{
+                  backgroundColor: "#B4DEF0",
+                  marginTop: "10px",
+                  borderRadius: "20px",
+                }}
+              >
+                <CardContent style={{ marginLeft: "0px" }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontWeight: "bolder", fontSize: "16px" }}
+                      >
+                        Physics
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Chemistry
-                    </Typography>
+                      <label
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "16px",
+                        }}
+                      >
+                        23 Feb
+                      </label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "30px",
-                        fontWeight: "bolder",
-                        fontSize: "16px",
-                      }}
-                    >
-                      23 Feb
-                    </label>
-                  </Grid>
-                </Grid>
 
-                <Typography gutterBottom variant="h7" component="div">
-                  Grade 13
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontSize: "12px", fontWeight: "bolder" }}
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 13
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        Binura Binduhewa
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Binura Binduhewa
-                    </Typography>
+                      <label>4.00PM - 6.00PM</label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label>4.00PM - 6.00PM</label>
-                  </Grid>
-                </Grid>
-              </CardActions>
-            </Card>
+                </CardActions>
+              </Card>
 
-            <Card
-              sx={{ maxWidth: 500, maxHeight: 700 }}
-              style={{
-                backgroundColor: "white",
-                marginTop: "10px",
-                borderRadius: "20px",
-              }}
-            >
-              <CardContent style={{ marginLeft: "0px" }}>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontWeight: "bolder", fontSize: "16px" }}
+              <Card
+                sx={{ maxWidth: 350, maxHeight: 700 }}
+                style={{
+                  backgroundColor: "#F9E788",
+                  marginTop: "10px",
+                  borderRadius: "20px",
+                }}
+              >
+                <CardContent style={{ marginLeft: "0px" }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontWeight: "bolder", fontSize: "16px" }}
+                      >
+                        Chemistry
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Biology
-                    </Typography>
+                      <label
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "16px",
+                        }}
+                      >
+                        23 Feb
+                      </label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "30px",
-                        fontWeight: "bolder",
-                        fontSize: "16px",
-                      }}
-                    >
-                      23 Feb
-                    </label>
-                  </Grid>
-                </Grid>
 
-                <Typography gutterBottom variant="h7" component="div">
-                  Grade 13
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontSize: "12px", fontWeight: "bolder" }}
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 13
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        Binura Binduhewa
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Binura Binduhewa
-                    </Typography>
+                      <label>4.00PM - 6.00PM</label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label>4.00PM - 6.00PM</label>
-                  </Grid>
-                </Grid>
-              </CardActions>
-            </Card>
+                </CardActions>
+              </Card>
 
-            {/* <Card
-              sx={{ maxWidth: 500, maxHeight: 700 }}
-              style={{
-                backgroundColor: "white",
-                marginTop: "15px",
-                borderRadius: "20px",
-              }}
-            >
-              <CardContent style={{ marginLeft: "0px" }}>
-                <Grid container>
-                  <Grid item xs={12} sm={6} md={4}>
-                    <Typography variant="h6" style={{ fontWeight: "bolder" }}>
-                      Biology
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label style={{ fontWeight: "bolder", fontSize:"16px" }} id="">
-                      23 Feb
-                    </label>
-                  </Grid>
-                </Grid>
-                <Typography gutterBottom variant="h7" component="div">
-                  Grade 13
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontSize: "12px", fontWeight: "bolder" }}
+              <Card
+                sx={{ maxWidth: 350, maxHeight: 700 }}
+                style={{
+                  backgroundColor:"#F6A695",
+                  marginTop: "10px",
+                  borderRadius: "20px",
+                }}
+              >
+                <CardContent style={{ marginLeft: "0px", }}>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontWeight: "bolder", fontSize: "16px" }}
+                      >
+                        Combined
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Binura Binduhewa
-                    </Typography>
+                      <label
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "16px",
+                        }}
+                      >
+                        23 Feb
+                      </label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label>4.00PM - 6.00PM</label>
-                  </Grid>
-                </Grid>
-              </CardActions>
-            </Card>
 
-            <Card
-              sx={{ maxWidth: 500, maxHeight: 700 }}
-              style={{
-                backgroundColor: "white",
-                marginTop: "15px",
-                borderRadius: "20px",
-              }}
-            >
-              <CardContent style={{ marginLeft: "0px" }}>
-                <Grid container>
-                  <Grid item xs={12} sm={6} md={4}>
-                    <Typography variant="" style={{ fontWeight: "bolder", fontSize:"18px" }}>
-                      Chemistry
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label style={{ fontWeight: "bolder" }} id="">
-                      23 Feb
-                    </label>
-                  </Grid>
-                </Grid>
-                <Typography gutterBottom variant="h7" component="div">
-                  Grade 13
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Grid container>
-                  <Grid item lg={6} md={6} sm={12} xs={12}>
-                    <Typography
-                      style={{ fontSize: "12px", fontWeight: "bolder" }}
+                  <Typography gutterBottom variant="h7" component="div">
+                    Grade 13
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Grid container>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
+                      <Typography
+                        style={{ fontSize: "12px", fontWeight: "bolder" }}
+                      >
+                        Binura Binduhewa
+                      </Typography>
+                    </Grid>
+                    <Grid
+                      item
+                      lg={6}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      style={{ textAlign: "end" }}
                     >
-                      Binura Binduhewa
-                    </Typography>
+                      <label>4.00PM - 6.00PM</label>
+                    </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    xs={12}
-                    style={{ textAlign: "end" }}
-                  >
-                    <label>4.00PM - 6.00PM</label>
-                  </Grid>
-                </Grid>
-              </CardActions>
-            </Card> */}
+                </CardActions>
+              </Card>
+            </Grid>
           </Grid>
 
           {/* <Grid item lg={6} md={6} sm={12} xs={12}>
@@ -631,46 +735,47 @@ function ResponsiveDrawer(props) {
 
       </AppBar>
 
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
+      {/* SideBar */}
+      <Grid container>
+        <Box
+          component="nav"
+          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          aria-label="mailbox folders"
         >
-          {drawer}
-        </Drawer>
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+          >
+            {drawer}
+          </Drawer>
 
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-
-      </Box>
-      
+          <Drawer
+            variant="permanent"
+            sx={{
+              display: { xs: "none", sm: "block" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+            open
+          >
+            {drawer}
+          </Drawer>
+        </Box>
+      </Grid>
     </Box>
   );
 }
