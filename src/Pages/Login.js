@@ -12,8 +12,7 @@ import {
   colors,
   Card,
 } from "@mui/material";
-// import image from "./Group 72.png";
-import image2 from "./login image.png";
+import image from "./assets/Group 72.png";
 import { red } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 
@@ -43,9 +42,10 @@ const Login = () => {
               </Grid>
             </Grid>
       </Grid>
+
       <Grid container component="main" style={{justifyContent:"space-evenly"}}>
         <Grid item lg={6} md={6} sm={12} xs={12}>
-          <img style={{ width: "100%" }} src={image2} />
+          <img style={{ width: "100%" }} src={image} />
         </Grid>
 
         <Card
@@ -150,6 +150,7 @@ const Login = () => {
             </Box>
           </Box>
        </Card>
+       
       </Grid>
     </>
   );
